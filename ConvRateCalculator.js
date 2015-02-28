@@ -1,5 +1,3 @@
-var answer;
-
 // Calculate button event handler
 function init () {
     var calculateButton = document.getElementById("calculate");
@@ -21,7 +19,7 @@ function handleCalculateButton() {
 function calculateConvRate(pageViews, submissions) {
     // Convert the result to percentage then round to the nearest hundredth
     var convRate = Math.round(((submissions/pageViews) * 100) * 100) / 100;
-    answer = convRate + "%";
+     var answer = convRate + "%";
     
     // Format the answer for HTML
     function displayAnswer(output) {
