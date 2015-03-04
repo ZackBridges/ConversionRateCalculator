@@ -1,6 +1,9 @@
+// Initialize functions
+$(document).ready(init);
+
 // 'Calculate' button event handler
-function init () {
-    $("#calculate").click(function() {
+function init() {
+    $("#calculate").click(function () {
         calculateConvRate($("#pageviews").val(), $("#submissions").val());
     });
 }
@@ -8,11 +11,7 @@ function init () {
 // Calculate and display the conversion rate
 function calculateConvRate(pageViews, submissions) {
     // Convert the result to percentage then round to the nearest hundredth
-    var convRate = Math.round(((submissions/pageViews) * 100) * 100) / 100;
-    var answer = convRate + "%";
+    var convRate = (Math.round(((submissions / pageViews) * 100) * 100) / 100) + "%";
 
-    $("#answer").text(answer);
+    $("#answer").text(convRate);
 }
-
-// Initialize functions
-$(document).ready(init);
